@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="assets/main.css">
+</head>
+
+<body class="bg-gray-900 text-gray-100 p-6">
+
+    <!-- Header -->
+    <header class="shadow sticky top-0 bg-opacity-90 bg-gray-900 z-50 mb-6">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <h1 class="text-2xl font-semibold text-white">
+                <span class="text-blue-500">{!!</span>
+                Hello World
+                <span class="text-blue-500">!!}</span>
+            </h1>
+            <div class="block lg:hidden">
+                <button id="menu-btn" class="rounded-md focus:ring-2 px-2 py-1 focus:ring-blue-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <nav id="menu" class="hidden lg:flex lg:items-center w-full lg:w-auto">
+                <a href="#home" class="text-gray-100 hover:text-blue-400 mx-4">Home</a>
+                <a href="#technologies" class="text-gray-100 hover:text-blue-400 mx-4">Technologies</a>
+                <a href="#projects" class="text-gray-100 hover:text-blue-400 mx-4">Projects</a>
+                <a href="#findme" class="text-gray-100 hover:text-blue-400 mx-4">Contact</a>
+            </nav>
+        </div>
+        <div id="dropdown" class="hidden lg:hidden rounded-lg text-center justify-center mb-6 bg-gray-900">
+            <a href="#home" class="block text-gray-100 py-2 px-6 hover:bg-gray-700">Home</a>
+            <a href="#technologies" class="block text-gray-100 py-2 px-6 hover:bg-gray-700">Technologies</a>
+            <a href="#projects" class="block text-gray-100 py-2 px-6 hover:bg-gray-700">Projects</a>
+            <a href="#findme" class="block text-gray-100 py-2 px-6 hover:bg-gray-700">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gray-800 rounded-lg mt-4 py-16 mb-8">
+        <div class="container mx-auto px-6 py-16 flex flex-col lg:flex-row items-center justify-center">
+            <div class="lg:w-1/2 text-center lg:text-left capitalize">
+                <h3 class="text-xl font-bold text-neutral-500">Hallo, I'm </h3>
+                <h1 class="text-4xl font-bold text-white mt-4 hover:underline underline-offset-8">
+                    Achmad Luthfi Afif
+                </h1>
+                <p class="text-xl mt-4 mb-8 text-neutral-200">full-stack web development.</p>
+                <div class="mt-4 flex flex-wrap lg:justify-start sm:justify-center">
+                    <a href="https://github.com/Luthfiahmad12" target="_blank"
+                        class="w-10 h-10 bg-white m-2 rounded-full transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300">
+                        <img src="assets/github.png" />
+                    </a>
+                    <a href="https://www.instagram.com/ahmadluthfia_/" target="_blank"
+                        class="w-10 h-10 m-2 rounded-full transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300">
+                        <img src="assets/ig.png" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/luthfiahmad12" target="_blank"
+                        class="w-10 h-10 m-2 rounded-full transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300">
+                        <img src="assets/linkedin.png" />
+                    </a>
+                </div>
+                <div class="mt-4 grid lg:grid-cols-4 md:grid-cols-1 sm:grid-cols-1 text-center gap-4 content-center">
+                    <a href="#"
+                        class="mt-4 px-4 py-2 bg-blue-500 rounded-md text-white text-center transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
+                        Hire Me
+                    </a>
+                    <a href="#"
+                        class="mt-4 px-4 py-2 bg-blue-500 rounded-md text-white text-center transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
+                        Download CV
+                    </a>
+                </div>
+            </div>
+            <div class="lg:w-1/2 mt-8 lg:mt-0 flex justify-center">
+                <img src="assets/programmer.png" alt="Profile Picture" class="w-80 rounded-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- technologies Section -->
+    <section id="technologies" class="bg-gray-900 py-8 mb-8">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold text-white">Technologies I Use</h2>
+            <p class="text-gray-300 mt-4">Here are some of the technologies and tools I work with:</p>
+
+            <!-- Basic Techs -->
+            <div class="mt-8">
+                <h3 class="text-xl font-semibold text-white">Basic Tech</h3>
+                <div class="mt-4 flex flex-wrap justify-center">
+                    <div class="m-4">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML" class="technology-logo">
+                        <span class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">HTML 5</span>
+                    </div>
+                    <div class="m-4">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"
+                            class="technology-logo">
+                        <span class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">CSS #</span>
+                    </div>
+                    <div class="m-4">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JavaScript" class="technology-logo">
+                        <span
+                            class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">JavaScript</span>
+                    </div>
+                    <div class="m-4">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"
+                            class="technology-logo">
+                        <span class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">PHP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- frameworks -->
+            <div class="mt-8">
+                <h3 class="text-xl font-semibold text-white">Frameworks</h3>
+                <div class="mt-4 flex flex-wrap justify-center">
+                    <div class="m-4">
+                        <img src="assets/tailwind.svg" alt="Tailwind CSS" class="technology-logo">
+                        <span class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">Tailwind
+                            CSS</span>
+                    </div>
+                    <div class="m-4">
+                        <img src="assets/bootstrap.svg" alt="Bootstrap" class="technology-logo">
+                        <span class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">Bootstrap</span>
+                    </div>
+                    <div class="m-4">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
+                            class="technology-logo" />
+                        <span class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">Laravel</span>
+                    </div>
+                    <div class="m-4">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/livewire/livewire-original.svg"
+                            class="technology-logo" />
+                        <span class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">Laravel
+                            Livewire</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Tools -->
+            <div class="mt-8">
+                <h3 class="text-xl font-semibold text-white">Tools</h3>
+                <div class="mt-4 flex flex-wrap justify-center">
+                    <div class="m-4">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                            alt="MySQL" class="technology-logo">
+                        <span class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">MySQL</span>
+                    </div>
+                    <div class="m-4">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"
+                            class="technology-logo">
+                        <span class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">Git</span>
+                    </div>
+                    <div class="m-4">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                            alt="VSCode" class="technology-logo">
+                        <span class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">VSCode</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="bg-gray-800 py-16 rounded-lg mb-8">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl font-bold text-white text-center">Projects</h2>
+            <p class="text-gray-300 mt-4 text-center">Here are some projects I've worked on: </p>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="bg-gray-900 p-6 rounded-lg shadow-lg transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
+                    <h3 class="text-xl font-semibold text-white">Project One</h3>
+                    <p class="text-gray-300 mt-2">Description of project one.</p>
+                </div>
+                <div
+                    class="bg-gray-900 p-6 rounded-lg shadow-lg  transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
+                    <h3 class="text-xl font-semibold text-white">Project Two</h3>
+                    <p class="text-gray-300 mt-2">Description of project two.</p>
+                </div>
+                <div
+                    class="bg-gray-900 p-6 rounded-lg shadow-lg  transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
+                    <h3 class="text-xl font-semibold text-white">Project Three</h3>
+                    <p class="text-gray-300 mt-2">Description of project three.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- find me section -->
+    <section id="findme" class="bg-gray-900 py-16 rounded-lg mb-8">
+        <div class=" container mx-auto px-6">
+            <h2 class="text-2xl font-bold text-white text-center">Find Me</h2>
+            <p class="text-gray-300 mt-4 text-center">Wanna get in touch?</p>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="bg-gray-800 p-6 rounded-lg shadow-lg transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-800 duration-300">
+                    <div class="mt-2 mb-2 flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+                        </svg>
+                    </div>
+                    <p class="text-gray-300 mt-2 text-center">luthfiafif625@gmail.com</p>
+                </div>
+                <div
+                    class="bg-gray-800 p-6 rounded-lg shadow-lg  transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-800 duration-300">
+                    <div class="mt-2 mb-2 flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
+                        </svg>
+                    </div>
+                    <p class="text-gray-300 mt-2 text-center">+62 8123 4567 890</p>
+                </div>
+                <div
+                    class="bg-gray-800 p-6 rounded-lg shadow-lg  transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-800 duration-300">
+                    <div class="mt-2 mb-2 flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                        </svg>
+
+                    </div>
+                    <p class="text-gray-300 mt-2 text-center">Wonosobo, Central Java, Indonesia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-100">© 2024 <a href="#" class="hover:text-blue-500">Achmad Luthfi Afif</a>. All rights
+                reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/main.js"></script>
+
+</body>
+
+</html>
