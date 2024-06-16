@@ -8,14 +8,15 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <link rel="stylesheet" href="assets/main.css">
 </head>
 
-<body class="bg-gray-900 text-gray-100 p-6">
+<body data-scroll class="bg-gray-900 text-gray-100 p-6">
 
     <!-- Header -->
-    <header class="shadow sticky top-0 bg-opacity-90 bg-gray-900 z-50 mb-6">
+    <header id="header" class="shadow sticky top-0 bg-opacity-90 bg-gray-900 z-50 mb-6">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <h1 class="text-2xl font-semibold text-white">
                 <span class="text-blue-500">{!!</span>
@@ -31,27 +32,27 @@
                     </svg>
                 </button>
             </div>
-            <nav id="menu" data-scroll class="hidden lg:flex lg:items-center w-full lg:w-auto">
-                <a href="#home" class="text-gray-100 hover:text-blue-400 mx-4">Home</a>
-                <a href="#technologies" class="text-gray-100 hover:text-blue-400 mx-4">Technologies</a>
-                <a href="#projects" class="text-gray-100 hover:text-blue-400 mx-4">Projects</a>
-                <a href="#findme" class="text-gray-100 hover:text-blue-400 mx-4">Contact</a>
+            <nav id="menu" class="hidden lg:flex lg:items-center w-full lg:w-auto">
+                <a href="#home" class="nav-link text-gray-100 hover:text-blue-400 mx-4">Home</a>
+                <a href="#technologies" class="nav-link text-gray-100 hover:text-blue-400 mx-4">Technologies</a>
+                <a href="#projects" class="nav-link text-gray-100 hover:text-blue-400 mx-4">Projects</a>
+                <a href="#findme" class="nav-link text-gray-100 hover:text-blue-400 mx-4">Find Me</a>
             </nav>
         </div>
         <div id="dropdown" data-scroll class="hidden lg:hidden rounded-lg text-center justify-center mb-6 bg-gray-900">
-            <a href="#home" class="block text-gray-100 py-2 px-6 hover:bg-gray-700">Home</a>
-            <a href="#technologies" class="block text-gray-100 py-2 px-6 hover:bg-gray-700">Technologies</a>
-            <a href="#projects" class="block text-gray-100 py-2 px-6 hover:bg-gray-700">Projects</a>
-            <a href="#findme" class="block text-gray-100 py-2 px-6 hover:bg-gray-700">Contact</a>
+            <a href="#home" class="nav-link block text-gray-100 py-2 px-6 hover:bg-gray-700">Home</a>
+            <a href="#technologies" class="nav-link block text-gray-100 py-2 px-6 hover:bg-gray-700">Technologies</a>
+            <a href="#projects" class="nav-link block text-gray-100 py-2 px-6 hover:bg-gray-700">Projects</a>
+            <a href="#findme" class="nav-link block text-gray-100 py-2 px-6 hover:bg-gray-700">Find Me</a>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="bg-gray-800 rounded-lg mt-4 py-16 mb-8">
         <div class="container mx-auto px-6 py-16 flex flex-col lg:flex-row items-center justify-center">
-            <div class="lg:w-1/2 text-center lg:text-left capitalize">
-                <h3 class="text-xl font-bold text-neutral-500">Hallo, I'm </h3>
-                <h1 class="text-4xl font-bold text-white mt-4 hover:underline underline-offset-8">
+            <div class="animate__animated animate__fadeInLeftlg:w-1/2 lg:text-left capitalize">
+                <span class="text-xl font-bold text-neutral-500">Hallo, I'm </span>
+                <h1 class="text-5xl justify-between font-bold text-white mt-4 hover:underline underline-offset-8">
                     Achmad Luthfi Afif
                 </h1>
                 <p class="text-xl mt-4 mb-8 text-neutral-200">full-stack web development.</p>
@@ -70,18 +71,20 @@
                     </a>
                 </div>
                 <div class="mt-4 grid lg:grid-cols-4 md:grid-cols-1 sm:grid-cols-1 text-center gap-4 content-center">
-                    <a href="#"
+                    <a href="https://api.whatsapp.com/send?phone=6282138682214&text=Halo%2C%20saya%20ingin%20bekerja%20sama%20dengan%20anda%20untuk%20pembuatan%20website."
+                        target="_blank"
                         class="mt-4 px-4 py-2 bg-blue-500 rounded-md text-white text-center transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
                         Hire Me
                     </a>
-                    <a href="#"
-                        class="mt-4 px-4 py-2 bg-blue-500 rounded-md text-white text-center transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
+                    <a href="javascript:void(0)"
+                        class="mt-4 px-4 py-2 bg-blue-500 rounded-md text-white text-center transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300 hover:content[]">
                         Download CV
                     </a>
                 </div>
             </div>
-            <div class="lg:w-1/2 mt-8 lg:mt-0 flex justify-center">
-                <img src="assets/programmer.png" alt="Profile Picture" class="w-80 rounded-lg">
+            <div class="animate__animated animate__fadeInRight lg:w-1/2 mt-8 lg:mt-0 flex justify-center">
+                <img src="assets/programmer.png" alt="Profile Picture"
+                    class="w-80 rounded-lg cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300">
             </div>
         </div>
     </section>
@@ -96,23 +99,27 @@
             <div class="mt-8">
                 <h3 class="text-xl font-semibold text-white">Basic Tech</h3>
                 <div class="mt-4 flex flex-wrap justify-center">
-                    <div class="m-4">
+                    <div
+                        class="m-4 cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
                             alt="HTML" class="technology-logo">
                         <span class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">HTML 5</span>
                     </div>
-                    <div class="m-4">
+                    <div
+                        class="m-4 cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"
                             class="technology-logo">
                         <span class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">CSS #</span>
                     </div>
-                    <div class="m-4">
+                    <div
+                        class="m-4 cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
                             alt="JavaScript" class="technology-logo">
                         <span
                             class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">JavaScript</span>
                     </div>
-                    <div class="m-4">
+                    <div
+                        class="m-4 cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"
                             class="technology-logo">
                         <span class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">PHP</span>
@@ -124,21 +131,25 @@
             <div class="mt-8">
                 <h3 class="text-xl font-semibold text-white">Frameworks</h3>
                 <div class="mt-4 flex flex-wrap justify-center">
-                    <div class="m-4">
+                    <div
+                        class="m-4 cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300">
                         <img src="assets/tailwind.svg" alt="Tailwind CSS" class="technology-logo">
                         <span class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">Tailwind
                             CSS</span>
                     </div>
-                    <div class="m-4">
+                    <div
+                        class="m-4 cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300">
                         <img src="assets/bootstrap.svg" alt="Bootstrap" class="technology-logo">
                         <span class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">Bootstrap</span>
                     </div>
-                    <div class="m-4">
+                    <div
+                        class="m-4 cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
                             class="technology-logo" />
                         <span class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">Laravel</span>
                     </div>
-                    <div class="m-4">
+                    <div
+                        class="m-4 cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/livewire/livewire-original.svg"
                             class="technology-logo" />
                         <span class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">Laravel
@@ -150,17 +161,26 @@
             <div class="mt-8">
                 <h3 class="text-xl font-semibold text-white">Tools</h3>
                 <div class="mt-4 flex flex-wrap justify-center">
-                    <div class="m-4">
+                    <div
+                        class="m-4 cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
                             alt="MySQL" class="technology-logo">
                         <span class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">MySQL</span>
                     </div>
-                    <div class="m-4">
+                    <div
+                        class="m-4 cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg"
+                            alt="Vite" class="technology-logo">
+                        <span class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">Vite</span>
+                    </div>
+                    <div
+                        class="m-4 cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"
                             class="technology-logo">
                         <span class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">Git</span>
                     </div>
-                    <div class="m-4">
+                    <div
+                        class="m-4 cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
                             alt="VSCode" class="technology-logo">
                         <span class="bg-gray-800 px-2 py-2 rounded-lg text-gray-300 mt-1 text-xs block">VSCode</span>
@@ -170,55 +190,48 @@
         </div>
     </section>
 
+    <!-- Projects -->
     <section id="projects" class="bg-gray-800 py-16 rounded-lg mb-8">
         <div class="container mx-auto px-6">
             <h2 class="text-2xl font-bold text-white text-center">Projects</h2>
             <p class="text-gray-300 mt-4 text-center">Here are some projects I've worked on: </p>
             <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div
-                    class="bg-gray-900 p-6 rounded-lg shadow-lg transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
-                    <h3 class="text-xl font-semibold text-white">Project One</h3>
-                    <p class="text-gray-300 mt-2">Description of project one.</p>
+                    class="bg-gray-900 cursor-pointer p-6 rounded-lg shadow-lg transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
+                    <img src="assets/project-1.png" class="w-full h-40 object-cover" alt="projects">
+                    <p class="text-center font-medium text-white mt-4 capitalize">berkah mandiri sayur</p>
                 </div>
                 <div
-                    class="bg-gray-900 p-6 rounded-lg shadow-lg  transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
-                    <h3 class="text-xl font-semibold text-white">Project Two</h3>
-                    <p class="text-gray-300 mt-2">Description of project two.</p>
+                    class="bg-gray-900 cursor-pointer p-6 rounded-lg shadow-lg transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
+                    <img src="assets/project-2.png" class="w-full h-40 object-cover" alt="projects">
+                    <p class="text-center font-medium text-white mt-4 capitalize">e-commerce kedai mscoffe</p>
                 </div>
                 <div
-                    class="bg-gray-900 p-6 rounded-lg shadow-lg  transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
-                    <h3 class="text-xl font-semibold text-white">Project Three</h3>
-                    <p class="text-gray-300 mt-2">Description of project three.</p>
+                    class="bg-gray-900 cursor-pointer p-6 rounded-lg shadow-lg transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
+                    <img src="assets/project-3.png" class="w-full h-40 object-cover" alt="projects">
+                    <p class="text-center font-medium text-white mt-4 capitalize">Management system bagas luxury camp
+                    </p>
                 </div>
                 <div
-                    class="bg-gray-900 p-6 rounded-lg shadow-lg  transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
-                    <h3 class="text-xl font-semibold text-white">Project Four</h3>
-                    <p class="text-gray-300 mt-2">Description of project Four.</p>
+                    class="bg-gray-900 cursor-pointer p-6 rounded-lg shadow-lg transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
+                    <img src="assets/project-4.png" class="w-full h-40 object-cover" alt="projects">
+                    <p class="text-center font-medium text-white mt-4 capitalize">sistem pakar</p>
                 </div>
                 <div
-                    class="bg-gray-900 p-6 rounded-lg shadow-lg  transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
-                    <h3 class="text-xl font-semibold text-white">Project Five</h3>
-                    <p class="text-gray-300 mt-2">Description of project Five.</p>
+                    class="bg-gray-900 cursor-pointer p-6 rounded-lg shadow-lg transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
+                    <img src="assets/project-5.png" class="w-full h-40 object-cover" alt="projects">
+                    <p class="text-center font-medium text-white mt-4 capitalize">pkm kalibawang</p>
                 </div>
                 <div
-                    class="bg-gray-900 p-6 rounded-lg shadow-lg  transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
-                    <h3 class="text-xl font-semibold text-white">Project Six</h3>
-                    <p class="text-gray-300 mt-2">Description of project Six.</p>
+                    class="bg-gray-900 cursor-pointer p-6 rounded-lg shadow-lg transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
+                    <img src="assets/project-6.png" class="w-full h-40 object-cover" alt="projects">
+                    <p class="text-center font-medium text-white mt-4 capitalize">SPP paud cahaya</p>
                 </div>
                 <div
-                    class="bg-gray-900 p-6 rounded-lg shadow-lg  transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
-                    <h3 class="text-xl font-semibold text-white">Project Seven</h3>
-                    <p class="text-gray-300 mt-2">Description of project Seven.</p>
-                </div>
-                <div
-                    class="bg-gray-900 p-6 rounded-lg shadow-lg  transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
-                    <h3 class="text-xl font-semibold text-white">Project Eight</h3>
-                    <p class="text-gray-300 mt-2">Description of project Eight.</p>
-                </div>
-                <div
-                    class="bg-gray-900 p-6 rounded-lg shadow-lg  transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
-                    <h3 class="text-xl font-semibold text-white">Project Nine</h3>
-                    <p class="text-gray-300 mt-2">Description of project Nine.</p>
+                    class="bg-gray-900 cursor-pointer p-6 rounded-lg shadow-lg transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-300">
+                    <img src="assets/project-6.png" class="w-full h-40 object-cover" alt="projects">
+                    <p class="text-center font-medium text-white mt-4 capitalize">Sistem manajemen reseller carica
+                        sumbing segar</p>
                 </div>
             </div>
         </div>
@@ -226,7 +239,7 @@
 
     <!-- find me section -->
     <section id="findme" class="bg-gray-900 py-16 rounded-lg mb-8">
-        <div class=" container mx-auto px-6">
+        <div class="container mx-auto px-6">
             <h2 class="text-2xl font-bold text-white text-center">Find Me</h2>
             <p class="text-gray-300 mt-4 text-center">Wanna get in touch?</p>
             <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -270,11 +283,21 @@
         </div>
     </section>
 
+    <button id="scrollToTopBtn" class="fixed bottom-4 right-4 text-white px-4 py-2 rounded-lg hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-12 animate-bounce">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+    </button>
+
     <!-- Footer -->
-    <footer class="bg-gray-900 py-6">
+    <footer id="footer" class="bg-gray-900 py-6">
         <div class="container mx-auto px-6 text-center">
-            <p class="text-gray-100">© 2024 <a href="#" class="hover:text-blue-500">Achmad Luthfi Afif</a>. All rights
-                reserved.</p>
+            <p class="text-gray-100">©
+                <script>document.write(new Date().getFullYear())</script> .
+                Made with ❤ and Coffee.
+            </p>
         </div>
     </footer>
 
